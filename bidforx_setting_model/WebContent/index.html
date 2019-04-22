@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+	    <link rel="stylesheet" type="text/css" href="style.css">
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.layout,sap.ui.commons,sap.ui.comp,sap.ui.core,sap.ui.richtexteditor,sap.ui.table,
+									sap.ui.unified,sap.ui.ux3"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("bidforx");
+				var app = new sap.m.App({initialPage:"idhome1"});
+				var home = sap.ui.view({id:"idhome1", viewName:"bidforx.home", type:sap.ui.core.mvc.ViewType.JS});				
+				//var alhome = sap.ui.view({id:"idalhome1", viewName:"bidforx.alhome", type:sap.ui.core.mvc.ViewType.JS});
+				app.addPage(home);				
+			   // app.addPage(alhome);
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
